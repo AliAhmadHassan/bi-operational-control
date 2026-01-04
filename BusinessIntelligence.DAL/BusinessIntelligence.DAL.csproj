@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34008FFE-A29C-4474-9EEC-D307949FC44D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessIntelligence.DAL</RootNamespace>
+    <AssemblyName>BusinessIntelligence.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AnalysisServices.AdomdClient.12.0.2000.8\lib\net40\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuxConsultas.cs" />
+    <Compile Include="Auxiliar.cs" />
+    <Compile Include="AuxiliarParse.cs" />
+    <Compile Include="Carteira.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="DimCredor.cs" />
+    <Compile Include="DimHora.cs" />
+    <Compile Include="DimOcorrencia.cs" />
+    <Compile Include="DimSituacao.cs" />
+    <Compile Include="DimStatusCobranca.cs" />
+    <Compile Include="Discador.cs" />
+    <Compile Include="FactCarteira.cs" />
+    <Compile Include="Operacao.cs" />
+    <Compile Include="ParqueGrafico.cs" />
+    <Compile Include="Producao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingletonConexao.cs" />
+    <Compile Include="SingletonConexaoDiscador.cs" />
+    <Compile Include="TbFeriado.cs" />
+    <Compile Include="TbGrupo.cs" />
+    <Compile Include="TbGrupoCobranca.cs" />
+    <Compile Include="TbGrupoCobrancaMetas.cs" />
+    <Compile Include="TbGrupoCobrancaNotificacao.cs" />
+    <Compile Include="TbGrupoCobrancaOperador.cs" />
+    <Compile Include="TbGrupoCobrancaoSupervisor.cs" />
+    <Compile Include="TbGrupoUsuarioDiscador.cs" />
+    <Compile Include="TbMeta.cs" />
+    <Compile Include="TbMetaDispersao.cs" />
+    <Compile Include="TbNotificacao.cs" />
+    <Compile Include="TbNotificacaoMotivo.cs" />
+    <Compile Include="TbNotificacaoTipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessIntelligence.DTO\BusinessIntelligence.DTO.csproj">
+      <Project>{60923ba8-e6b3-4dd8-84e7-c72c04c89c5f}</Project>
+      <Name>BusinessIntelligence.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
